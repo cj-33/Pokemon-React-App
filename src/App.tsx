@@ -1,26 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* Top Section: Black frame */}
+      <div className="battle-frame">
+        {/* Placeholder for Pokemon images */}
+      </div>
+
+      {/* Bottom Section: Battle Log and Start Button */}
+      <div className="battle-controls">
+        <div className="battle-log">
+          <h2>Battle Log</h2>
+          <textarea readOnly />
+        </div>
+        <button className="start-battle-button">Start Battle!</button>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
