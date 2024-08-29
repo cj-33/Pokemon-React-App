@@ -9,7 +9,7 @@ const App: React.FC = () => {
     const fetchPokemon = async () => {
       const response = await axios.get('https://pokeapi.co/api/v2/pokemon/');
       const results = response.data.results;
-      const selected = results.sort(() => 0.5 - Math.random()).slice(0, 2).map(p => p.name);
+      const selected = results.sort(() => 0.5 - Math.random()).slice(0, 2).map((p: { name: string }) => p.name);
       setPokemon(selected);
     };
 
